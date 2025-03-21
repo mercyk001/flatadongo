@@ -1,0 +1,14 @@
+body {
+    font-family: 'Times New Roman';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+#poster {
+    width: 200px;
+    height: 300px;
+    margin-bottom: 20px;
+}
