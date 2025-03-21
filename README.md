@@ -1,0 +1,2 @@
+This is the week three code challenge.
+GOAL: Implement a mini web app to demonstrate your understanding of the three pillars of JavaScript, namely Handling Events, Manipulating the DOM, Communicating with the Server.
