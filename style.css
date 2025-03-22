@@ -1,14 +1,42 @@
 body {
-    font-family: 'Times New Roman';
+    font-family: Times New Roman;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    
+    background-color: #f0f0f0;
 }
 
-#poster {
-    width: 200px;
-    height: 300px;
-    margin-bottom: 20px;
+#app {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#film-details {
+    flex: 2;
+    padding-right: 20px;
+}
+
+#films {
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+}
+
+#films li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#films li.sold-out {
+    text-decoration: line-through;
+    color: red;
+}
+
+#buy-ticket {
+    margin-top: 10px;
 }
