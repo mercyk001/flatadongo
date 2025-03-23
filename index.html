@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlataDongo</title>
-    <link rel ="stylesheet" href ="style.css">
+    <title>Flatdango</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id ="container">
-        <div id="sidebar">
-            <ul id="films">
-
-                <li class ="placeholder">Movies Showing...</li>
-
-            </ul>
+    <header>
+        <h1>Flatadango Movie Theatre.
+            <p>BUY MOVIE TICKETS.</p>
+        </h1>
+    </header>
+    <div id="container">
+        <div id="film-details">
+            <img id="poster" src="" alt="Movie Poster">
+            <div id = "movie-info">
+            <h1 id="title"></h1>
+            <p id="runtime"></p>
+            <p id="showtime"></p>
+            <p id="available-tickets"></p>
+            <button id="buy-ticket">Buy Ticket</button>
         </div>
-
-        <div id="main">
-            <div id ="Details">
-                <img id ="poster" src=" " alt="">
-                <h1 id ="title"></h1> 
-                <p id ="runtime"></p>
-                <p id ="showtime"></p>
-                <p id ="available-tickets"></p>
-                <button id ="buy-ticket">Buy Ticket</button>
-            </div>
-        </div> 
+        
+        </div>
+        <ul id="films">
+            <!-- Placeholder, will be removed by JavaScript -->
+            <li>Placeholder</li>
+        </ul>
     </div>
-   <script src="index.js"></script> 
+    <script src="index.js"></script>
 </body>
 </html>
