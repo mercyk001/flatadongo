@@ -10,19 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const buyTicketButton = document.getElementById('buy-ticket');
     let isButtonClicked = false; 
 
-    
     filmList.innerHTML = '';
 
-    
-    fetch('http://localhost:3000/films/1')
+    fetch('https://my-json-server.typicode.com/mercyk001/flatadongo/films/1')
         .then(response => response.json())
         .then(film => {
             displayFilmDetails(film);
         })
         .catch(error => console.error('Error fetching film details:', error));
 
-    
-    fetch('http://localhost:3000/films')
+    fetch('https://my-json-server.typicode.com/mercyk001/flatadongo/films')
         .then(response => response.json())
         .then(films => {
             films.forEach(film => {
@@ -40,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error fetching films list:', error));
 
-    
     function displayFilmDetails(film) {
         poster.src = film.poster;
         title.textContent = film.title;
@@ -51,10 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
         buyTicketButton.textContent = film.capacity - film.tickets_sold === 0 ? 'Sold Out' : 'Buy Ticket';
         buyTicketButton.disabled = film.capacity - film.tickets_sold === 0;
 
-        
         isButtonClicked = false;
 
-        
         buyTicketButton.onclick = (event) => {
             event.preventDefault(); 
             if (!isButtonClicked && film.tickets_sold < film.capacity) {
@@ -71,9 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    
     function updateTicketsSold(film) {
-        fetch(`http://localhost:3000/films/${film.id}`, {
+        fetch(`https://my-json-server.typicode.com/mercyk001/flatadongo/films/${film.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -87,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error updating tickets sold:', error));
     }
 
-    
     function updateFilmListItem(film) {
         const filmItems = document.querySelectorAll('.film.item');
         filmItems.forEach(item => {
